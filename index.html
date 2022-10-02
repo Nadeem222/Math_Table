@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+    h1{
+        color: rgb(21, 1, 1);
+    }
+    .main {
+        /* border: solid blue; */
+        background-color: rgb(229, 210, 210);
+        width: 70vh;
+        height: 50vh;
+
+    }
+</style>
+<body>
+    <div class="main">
+        <h1>Multiplication Table For Loop</h1>
+        <form onsubmit="dosum();return false">
+
+            <b>Times :<input id="num1" type="number"></b>
+            <br>
+            <b>Tables :<input id="num2" type="number"></b>
+            <br>
+            <br>
+            <button type="submit">Generate Table</button>
+        </form>
+        <h3 id="result">         </h3>
+
+    <script>
+         function dosum() 
+        {
+
+            let firstnumber = Number(document.querySelector("#num1").value)
+            let secondnumber = Number(document.querySelector("#num2").value)
+            let xyz;
+            for (let i = 0; i < secondnumber; i++)
+             {
+                
+
+                result = (`${ let = firstnumber }  x ${i + 1} = ${firstnumber * (i + 1)} `);
+                
+                console.log(result)
+
+
+            }
+             document.querySelector("#result").innerHTML = result ;
+    }
+
+    </script>
+</div>
+</body>
+</html>
